@@ -1,3 +1,128 @@
-html {
-  
+@font-face {
+  font-family: 'Damion';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Damion'), url(https://fonts.gstatic.com/s/damion/v6/DwAj7ratfj53tabaOiOW3g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
 }
+
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Rubik'), local('Rubik-Regular'), url(https://fonts.gstatic.com/s/rubik/v4/_mlO9_1N7oXYhEnEzC2l-g.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Roboto Light'), local('Roboto-Light'), url(https://fonts.gstatic.com/s/roboto/v16/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto'), local('Roboto-Regular'), url(https://fonts.gstatic.com/s/roboto/v16/CWB0XYA8bzo0kSThX0UTuA.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Roboto Bold'), local('Roboto-Bold'), url(https://fonts.gstatic.com/s/roboto/v16/d-6IYplOFocCacKzxwXSOFtXRa8TVwTICgirnJhmVJw.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", serif;
+  font-weight: normal;
+}
+
+div {
+  display: block;
+}
+.container {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+h2 {
+  display: block;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+a {
+  color: black;
+}
+/*header section*/
+
+header {
+  align-items: center;
+  border: solid 1px black;
+  background-color: white;
+  display: flex;
+  font-size: 1.375rem;
+  justify-content: space-between;;
+  height: 4rem;
+  position: fixed;
+  width: 960px;
+  z-index: 1;
+}
+.colmar {
+  font-weight: bold;
+}
+.academy,
+nav span a {
+  color: rgba(0,0,0,0.6);
+}
+/*nav*/
+header nav {
+  padding-right: 1rem;
+}
+
+nav span {
+  display: inline-block;
+  padding: 0 .5rem;
+}
+
+/*logo*/
+.logo {
+  align-items: center;
+  display: flex;
+  padding: 0 1.5rem;
+}
+
+.logo img {
+  height: 3rem;
+  margin-right: .75rem;
+}
+
+
+
+
+/*practicing section*/
+
+
+/*start learning section*/
+
+
+/*thesis exhibit section*/
+
+
+/*footer section*/
