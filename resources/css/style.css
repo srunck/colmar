@@ -82,7 +82,7 @@ p {
 }
 
 h1 {
-  font-size: 34px;
+  font-size: 2.125rem;
   font-weight: bold;
   line-height: 1.2;
 }
@@ -96,6 +96,7 @@ h2 {
 
 a {
   color: black;
+  transition: color 0.1s ease-in 0.1s;
 }
 /*header section*/
 
@@ -117,6 +118,14 @@ header {
 .academy,
 nav span a {
   color: rgba(0,0,0,0.6);
+  transition: font-size 0.1s ease-in-out 0.1s;
+}
+
+nav span a:hover {
+  font-size: 1.25rem;
+  color: black;
+  transition: font-size 0.1s ease-in-out 0.1s;
+
 }
 
 header nav {
@@ -125,7 +134,7 @@ header nav {
 
 nav span {
   display: inline-block;
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding: 0 .5rem;
 }
 
@@ -179,10 +188,17 @@ nav span {
 }
 .banner-right button {
   background-color: rgb(74,74,74);
-  color: white;
-  font-size: 20px;
+  font-size: 1.25rem;
   padding: .5rem;
   max-width: 95%;
+}
+
+.banner-right button a {
+  color: rgb(213,213,213);
+}
+
+.banner-right button a:hover {
+  color: white;
 }
 
 /*practicing section*/
@@ -197,6 +213,7 @@ nav span {
 
 .practice-left {
   max-width: 60%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -211,8 +228,13 @@ nav span {
 
 .practice-left h1 {
   margin-bottom: 1.5rem;
+  max-width: 100%;
 }
 
+.practice-left p {
+  max-width: 100%;
+
+}
 .prac-notes-l {
   padding-bottom: 1.5rem;
   font-size: 1rem;
@@ -253,6 +275,9 @@ nav span {
   color: rgb(143,185,233);
 }
 
+.practice-r-text a:hover {
+  color: rgb(0,0,255);
+}
 .practice-r-campus {
   display: flex;
 }
@@ -283,7 +308,7 @@ nav span {
 }
 
 .learn-title {
-  padding: 32px 0;
+  padding: 2rem 0;
   text-align: center;
 }
 
@@ -319,6 +344,7 @@ nav span {
 .learn-2-2 img,
 .learn-2-3 img {
   max-height: 140px;
+  max-width: 100%;
 }
 
 .learn-1-1,
@@ -356,7 +382,7 @@ nav span {
   margin: 0 auto;
 }
 .thesis-title {
-  padding: 32px 0;
+  padding: 2rem 0;
   text-align: center;
 }
 
@@ -406,7 +432,7 @@ nav span {
   flex-direction: column;
   padding-top: 1rem;
   max-height: 136px;
-  min-width: 116px;
+  max-width: 116px;
 }
 .col-r-row-1-text {
   justify-content: space-around;
@@ -428,7 +454,7 @@ footer {
   border-top: solid 1px rgba(74,74,74,0.1);
   padding: 0.75rem 1.5rem 24px 1.5rem;
   margin: 0 auto 2rem auto;
-  width: 1178px;
+  max-width: 1178px;
   box-sizing: border-box;
 }
 
