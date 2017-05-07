@@ -46,7 +46,7 @@ body {
   background-color: rgb(243,244,245);
   color: rgb(74,74,74);
   margin: 0;
-  font-family: "Roboto", serif;
+  font-family: "Roboto", "sans-serif";
   font-weight: normal;
   line-height: 1.2;
 }
@@ -82,7 +82,7 @@ p {
 }
 
 h1 {
-  font-size: 34px;
+  font-size: 2.125rem;
   font-weight: bold;
   line-height: 1.2;
 }
@@ -96,10 +96,11 @@ h2 {
 
 a {
   color: black;
+  transition: color 0.1s ease-in 0.1s;
 }
 /*header section*/
 
-header {
+.header-desktop {
   align-items: center;
   background-color: white;
   display: flex;
@@ -109,6 +110,11 @@ header {
   width: 1178px;
   z-index: 1;
 }
+
+.header-mobile {
+  display: none;
+}
+
 .colmar {
   font-weight: bold;
 }
@@ -117,15 +123,23 @@ header {
 .academy,
 nav span a {
   color: rgba(0,0,0,0.6);
+  transition: font-size 0.1s ease-in-out 0.1s;
 }
 
-header nav {
+nav span a:hover {
+  font-size: 1.25rem;
+  color: black;
+  transition: font-size 0.1s ease-in-out 0.1s;
+
+}
+
+.header-desktop nav {
   padding-right: 1rem;
 }
 
 nav span {
   display: inline-block;
-  font-size: 1.25rem;
+  font-size: 1rem;
   padding: 0 .5rem;
 }
 
@@ -142,6 +156,24 @@ nav span {
   margin-right: .25rem;
 }
 
+@media only screen and (max-width: 767px) {
+
+  .header-desktop {
+    display: none;
+  }
+  .header-mobile {
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    height: 4rem;
+    width: 767px;
+  }
+  .header-mobile a {
+    display: flex;
+    align-items: center;
+  }
+}
+
 /*banner section*/
 .banner-section {
   background-color: rgb(216,216,216);
@@ -152,7 +184,7 @@ nav span {
 }
 
 .banner-left {
-  max-width: 60%;
+  width: 60%;
   padding: 0rem 0rem 2rem 1.5rem;
   display: flex;
   flex-direction: column;
@@ -179,11 +211,80 @@ nav span {
 }
 .banner-right button {
   background-color: rgb(74,74,74);
-  color: white;
-  font-size: 20px;
+  font-size: 1.25rem;
   padding: .5rem;
   max-width: 95%;
 }
+
+.banner-right button a {
+  color: rgb(213,213,213);
+}
+
+.banner-right button a:hover {
+  color: white;
+}
+
+@media only screen and (max-width: 767px) {
+  /*banner section*/
+
+  .banner-section {
+    background-color: rgb(216,216,216);
+    padding-top: 0;
+    width: 767px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .banner-section img {
+    display: none;
+  }
+
+  .banner-right button a {
+    color: white;
+    width: 100%;
+  }
+
+  .banner-right button a:active {
+    border: solid 1px white;
+  }
+
+  .banner-right h1 {
+    /*font-size: 20px;*/
+    min-width: 155px;
+  }
+
+  .banner-right h2 {
+    min-width: 203px;
+    margin-bottom: 0;
+  }
+
+  .banner-right button {
+    background-color: rgba(74,74,74,0.5);
+    margin: 1.5rem 0 2rem 0;
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .banner-left {
+    background-color: rgba(74,74,74,0.5);
+    width: 100%;
+    padding: 0;
+    margin: 0 0 2rem 0;
+    display: flex;
+    height: 180px;
+  }
+
+  .banner-right {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+}
+
 
 /*practicing section*/
 .practice-section,
@@ -197,6 +298,7 @@ nav span {
 
 .practice-left {
   max-width: 60%;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -211,8 +313,13 @@ nav span {
 
 .practice-left h1 {
   margin-bottom: 1.5rem;
+  max-width: 100%;
 }
 
+.practice-left p {
+  max-width: 100%;
+
+}
 .prac-notes-l {
   padding-bottom: 1.5rem;
   font-size: 1rem;
@@ -239,10 +346,26 @@ nav span {
   padding-right: 1rem;
 }
 
+.img-desk {
+  display: block;
+}
+
+.img-mobile {
+  display: none;
+}
+
 .practice-r-text {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    padding-left: 1rem;
+}
+
+.guest-text-desk {
+  display: block;
+}
+.guest-text-mobile {
+  display: none;
 }
 
 .prac-notes-r {
@@ -253,6 +376,10 @@ nav span {
   color: rgb(143,185,233);
 }
 
+.practice-r-text a:hover {
+  color: rgb(74,144,226);
+  font-weight: bold;
+}
 .practice-r-campus {
   display: flex;
 }
@@ -270,7 +397,53 @@ nav span {
   background-color: rgb(216,216,216);
 }
 
+@media only screen and (max-width: 767px) {
+/*practice section*/
 
+  .practice-r-orientation, .practice-r-campus, .practice-r-guest {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 1rem 1rem 0 1rem;
+    width: 100%;
+  }
+  .practice-left {
+    display: none;
+  }
+
+  .practice-right {
+    border: none;
+    width: 100%;
+    padding-top: 0;
+  }
+
+  .img-desk {
+    display: none;
+  }
+
+  .img-mobile {
+    display: block;
+  }
+
+  .practice-r-guest {
+    background-color: rgb(243,244,245);
+    padding-bottom: 2rem;
+}
+
+  .practice-right img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .guest-text-desk {
+    display: none;
+  }
+  .guest-text-mobile {
+    display: block;
+  }
+
+
+}
 
 /*start learning section*/
 .learn-container {
@@ -283,7 +456,7 @@ nav span {
 }
 
 .learn-title {
-  padding: 32px 0;
+  padding: 2rem 0;
   text-align: center;
 }
 
@@ -319,6 +492,7 @@ nav span {
 .learn-2-2 img,
 .learn-2-3 img {
   max-height: 140px;
+  max-width: 100%;
 }
 
 .learn-1-1,
@@ -349,14 +523,65 @@ nav span {
   margin-left: 1rem;
 }
 
+@media only screen and (max-width: 767px) {
+  /*learning section*/
+  .learn-row-1 img,
+  .learn-row-1 p,
+  .learn-row-2 img,
+  .learn-row-2 p{
+    display: none;
+  }
+  .learn-row-1,
+  .learn-row-2 {
+    flex-direction: column;
+    align-items: center;
+    max-width: 767px;
+    padding: 0 1rem 0 1rem;
+  }
+
+  .learn-row-2 {
+    margin-top: 0;
+  }
+
+  .learn-title {
+    padding-bottom: 1rem;
+  }
+
+  .learn-1-1,
+  .learn-1-2,
+  .learn-1-3,
+  .learn-2-1,
+  .learn-2-2,
+  .learn-2-3 {
+    background-color: rgb(216,216,216);
+    max-width: 100%;
+    width: 100%;
+    padding: 0 0 0 0;
+    margin: 0 0 .5rem 0;
+    box-sizing: border-box;
+  }
+
+  .learn-row-1 h2,
+  .learn-row-2 h2 {
+    padding: 1rem 0 1rem 1rem;
+    margin: 0 0 0 0;
+    box-sizing: border-box;
+  }
+}
 
 /*thesis exhibit section*/
 .thesis-container {
   max-width: 1178px;
   margin: 0 auto;
 }
-.thesis-title {
-  padding: 32px 0;
+
+.thesis-title-mobile {
+  display: none;
+}
+
+.thesis-title-desk {
+  display: block;
+  padding: 2rem 0;
   text-align: center;
 }
 
@@ -374,7 +599,6 @@ nav span {
 }
 
 .thesis-col-right {
-  /*border: dashed 2px red;*/
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -382,7 +606,6 @@ nav span {
 
 .col-r-row-one,
 .col-r-row-two {
-  /*border: solid 1px black;*/
   display: flex;
   align-content: center;
   height: 168px;
@@ -395,7 +618,6 @@ nav span {
 
 .col-r-row-one img,
 .col-r-row-two img {
-  /*border: dashed 2px red;*/
   max-height: 81%;
   padding: 1rem;
 }
@@ -406,7 +628,7 @@ nav span {
   flex-direction: column;
   padding-top: 1rem;
   max-height: 136px;
-  min-width: 116px;
+  max-width: 116px;
 }
 .col-r-row-1-text {
   justify-content: space-around;
@@ -424,11 +646,42 @@ nav span {
   margin-bottom: 1.2rem;
 }
 
+@media only screen and (max-width: 767px) {
+  /*Thesis section*/
+  .thesis-container {
+    max-width: 767px;
+  }
+
+  .thesis-title-mobile {
+    display: block;
+    padding: 2rem 0 2rem 0;
+    margin: 0 0 0 0;
+    text-align: center;
+  }
+
+  .thesis-title-desk {
+    display: none;
+  }
+
+  .thesis-col-right,
+  .thesis-col-left-urban {
+    display: none;
+  }
+
+  .thesis-col-left {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 1.5rem;
+  }
+
+
+}
+
 footer {
   border-top: solid 1px rgba(74,74,74,0.1);
   padding: 0.75rem 1.5rem 24px 1.5rem;
   margin: 0 auto 2rem auto;
-  width: 1178px;
+  max-width: 1178px;
   box-sizing: border-box;
 }
 
@@ -443,7 +696,22 @@ footer .copyright {
   flex-grow: 1;
 }
 
+@media only screen and (max-width: 767px) {
+  /*Footer section*/
+  .foot-links {
+    display: none;
+  }
 
+  footer {
+    /*border-top: solid 1px rgba(74,74,74,0.1);*/
+    border: none;
+    padding: 1rem 0 1rem 1rem;
+    margin: 0 auto;
+    max-width: 767px;
+    box-sizing: border-box;
+  }
+
+}
 
 
 
