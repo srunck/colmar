@@ -51,6 +51,17 @@ body {
   line-height: 1.2;
 }
 
+.outer-border-desk {
+  border-left: solid 1px rgba(74,74,74,0.5);
+  border-right: solid 1px rgba(74,74,74,0.5);
+  border-bottom: solid 1px rgba(74,74,74,0.5);
+  /*border: dashed 2px red;*/
+  max-width: 1178px;
+  margin: 0 auto;
+  /*position: relative;*/
+  /*top: 4rem;*/
+}
+
 .outer-border {
   border-left: solid 1px rgba(74,74,74,0.5);
   border-right: solid 1px rgba(74,74,74,0.5);
@@ -60,6 +71,15 @@ body {
   margin: 0 auto;
   /*position: relative;*/
   /*top: 4rem;*/
+}
+
+.outer-border {
+  display: block;
+}
+
+@media only screen and (max-width: 767px) {
+  /*Outer-border section*/
+
 }
 
 .wrapper {
@@ -95,7 +115,7 @@ h2 {
 }
 
 a {
-  color: black;
+  color: rgb(74,74,74);
   transition: color 0.1s ease-in 0.1s;
 }
 /*header section*/
@@ -167,6 +187,8 @@ nav span {
     justify-content: space-around;
     height: 4rem;
     width: 767px;
+    border-left: solid 1px rgba(74,74,74,0.5);
+    border-right: solid 1px rgba(74,74,74,0.5);
   }
   .header-mobile a {
     display: flex;
@@ -181,11 +203,13 @@ nav span {
   width: 1178px;
   display: flex;
   justify-content: center;
+  padding-left: 1.5rem;
 }
 
 .banner-left {
   width: 60%;
-  padding: 0rem 0rem 2rem 1.5rem;
+  padding: 0rem 1.5rem 2rem 0rem;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -200,20 +224,21 @@ nav span {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding-left: 2.5rem;
+  padding-left: 1rem;
   padding-right: 1.5rem;
-  max-width: 40%;
+  max-width: 423px;
 }
 
 .banner-right h1,
 .banner-right h2 {
   margin-bottom: 1.25rem;
+  max-width: 75%;
 }
 .banner-right button {
   background-color: rgb(74,74,74);
   font-size: 1.25rem;
   padding: .5rem;
-  max-width: 95%;
+  max-width: 64%;
 }
 
 .banner-right button a {
@@ -229,6 +254,7 @@ nav span {
 
   .banner-section {
     background-color: rgb(216,216,216);
+    padding-left: 0;
     padding-top: 0;
     width: 767px;
     display: flex;
@@ -251,11 +277,12 @@ nav span {
 
   .banner-right h1 {
     /*font-size: 20px;*/
-    min-width: 155px;
+    min-width: 260px;
+    max-width: 100%;
   }
 
   .banner-right h2 {
-    min-width: 203px;
+    min-width: 260px;
     margin-bottom: 0;
   }
 
@@ -282,18 +309,15 @@ nav span {
     width: 100%;
     box-sizing: border-box;
   }
-
 }
-
 
 /*practicing section*/
 .practice-section,
 .learning-section {
   width: 1178px;
   display: flex;
-  justify-content: center;
-  /*padding-bottom: 2rem;
-  margin-bottom: 2rem;*/
+  padding-left: 1.5rem;
+  justify-content: flex-start;
 }
 
 .practice-left {
@@ -302,8 +326,7 @@ nav span {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /*justify-content: center;*/
-  padding: 2rem 1.5rem 0 1.5rem;
+  padding: 2rem 1.5rem 0 0;
 }
 
 .practice-left img {
@@ -320,9 +343,15 @@ nav span {
   max-width: 100%;
 
 }
-.prac-notes-l {
+.prac-notes-1 {
   padding-bottom: 1.5rem;
-  font-size: 1rem;
+  font-size: .875rem;
+}
+
+.prac-notes-2 {
+  font-size: 12px;
+  font-weight: bold;
+  padding-bottom: 1.5rem;
 }
 
 .practice-right {
@@ -369,17 +398,20 @@ nav span {
 }
 
 .prac-notes-r {
+  font-size: .875rem;
   padding: .5rem 0;
 }
 
 .practice-r-text a {
   color: rgb(143,185,233);
+  font-size: .875rem;
 }
 
 .practice-r-text a:hover {
   color: rgb(74,144,226);
   font-weight: bold;
 }
+
 .practice-r-campus {
   display: flex;
 }
@@ -390,7 +422,8 @@ nav span {
   display: flex;
   flex-direction: row;
   padding: 1rem;
-  max-width: 100%;
+  max-width: 423px;
+  box-sizing: border-box;
 }
 
 .practice-r-guest {
@@ -400,12 +433,16 @@ nav span {
 @media only screen and (max-width: 767px) {
 /*practice section*/
 
+  .practice-section {
+      padding-left: 0;
+  }
+
   .practice-r-orientation, .practice-r-campus, .practice-r-guest {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
     padding: 1rem 1rem 0 1rem;
-    width: 100%;
+    max-width: 100%;
   }
   .practice-left {
     display: none;
@@ -428,6 +465,7 @@ nav span {
   .practice-r-guest {
     background-color: rgb(243,244,245);
     padding-bottom: 2rem;
+    border-bottom: solid 1px rgba(216,216,216,0.5);
 }
 
   .practice-right img {
@@ -469,8 +507,14 @@ nav span {
 }
 
 .learn-row-2 {
-  margin-top: 1rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
+}
+
+.learn-row-1,
+.learn-row-2,
+.learn-title {
+  background-color: rgb(234, 235, 236);
 }
 
 .learn-1-1,
@@ -531,6 +575,13 @@ nav span {
   .learn-row-2 p{
     display: none;
   }
+
+  .learn-row-1,
+  .learn-row-2,
+  .learn-title {
+    background-color: rgb(244, 245, 245);
+  }
+
   .learn-row-1,
   .learn-row-2 {
     flex-direction: column;
@@ -541,6 +592,9 @@ nav span {
 
   .learn-row-2 {
     margin-top: 0;
+    padding-bottom: 2rem;
+    border-bottom: solid 1px rgba(216,216,216,0.5);
+
   }
 
   .learn-title {
