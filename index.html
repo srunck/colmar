@@ -3,19 +3,21 @@
   <head>
     <link rel="stylesheet" href="./resources/css/reset.css">
     <link rel="stylesheet" href="./resources/css/style.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
     <meta charset="utf-8">
     <title>Colmar Academy</title>
   </head>
   <body>
-
       <!-- header section -->
   <div class="container">
     <header class="header-desktop">
-      <div class="logo">
-        <img src="./resources/images/ic-logo.svg">
-        <span class="colmar">COLMAR</span>
-        <span class="academy">ACADEMY</span>
-      </div>
+      <a href="#">
+        <div class="logo">
+          <img src="./resources/images/ic-logo.svg" alt="The Colmar Academy logo of a lion.">
+          <span class="colmar">COLMAR</span>
+          <span class="academy">ACADEMY</span>
+        </div>
+      </a>
       <nav class="nav">
         <span><a href="#">On campus</a></span>
         <span><a href="#">Online</a></span>
@@ -25,16 +27,16 @@
     </header>
     <header class="header-mobile">
       <a href="#">
-        <img src="./resources/images/ic-logo.svg">
+        <img src="./resources/images/ic-logo.svg" alt="The Colmar Academy logo of a lion.">
       </a>
       <a href="#">
-        <img src="./resources/images/ic-online.svg">
+        <img src="./resources/images/ic-online.svg" alt="A computer screen symbolizing the link for the Online menu option.">
       </a>
       <a href="#">
-        <img src="./resources/images/ic-on-campus.svg">
+        <img src="./resources/images/ic-on-campus.svg" alt="A school desk symbolizing the link for the For Companies menu option.">
       </a>
       <a href="#">
-        <img src="./resources/images/ic-login.svg">
+        <img src="./resources/images/ic-login.svg" alt="An drawing of a person which symbolizes the link for the Sign In menu option.">
       </a>
     </header>
   </div>
@@ -43,15 +45,14 @@
 
     <!-- banner section -->
   <div class="wrapper">
-    <div class="banner-section">   <!-- 960px wide -->
+    <div class="banner-section">
       <div class="banner-left">
-        <img src="./resources/images/banner.jpg">
+        <img src="./resources/images/banner.jpg" alt="Three students reading books and taking notes while sitting outdoors at a picnic table.">
       </div>
       <div class="banner-right">
         <h1>Learn something new everyday</h1>
         <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h2>
         <button type="button" name="button"><a href="#">Start here</a></button>
-        <!-- <a href="#" class="button">Start here</a> -->
       </div>
     </div>
   </div>
@@ -60,7 +61,7 @@
   <div class="wrapper">
     <div class="practice-section">
       <div class="practice-left">
-        <img src="./resources/images/information-main.jpg">
+        <img src="./resources/images/information-main.jpg" alt="A man sitting outside and reading a book.">
         <h1>It doesn't hurt to keep practicing</h1>
         <p class="prac-notes-1">Curabitur vitae libero in pisum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna. Phassellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique ligula."</p>
         <p class="prac-notes-2">Emanuel, Sr Strategist at Hiring.com</p>
@@ -69,8 +70,8 @@
       <div class="practice-right">
         <div class="practice-r-orientation">
           <!-- <div class="practice-r-img"> -->
-            <img class="img-desk" src="./resources/images/information-orientation.jpg">
-            <img class="img-mobile" src="./resources/images/information-orientation-mobile.jpg">
+            <img class="img-desk" src="./resources/images/information-orientation.jpg" alt="An aerial view of students walking along a footpath next to a chain link fence.">
+            <img class="img-mobile" src="./resources/images/information-orientation-mobile.jpg" alt="An aerial view of students walking along a footpath next to a chain link fence.">
           <!-- </div> -->
           <div class="practice-r-text">
             <h2>Orientation date</h2>
@@ -80,8 +81,8 @@
         </div>
 
         <div class="practice-r-campus">
-          <img class="img-desk" src="./resources/images/information-campus.jpg">
-          <img class="img-mobile" src="./resources/images/information-campus-mobile.jpg">
+          <img class="img-desk" src="./resources/images/information-campus.jpg" alt="Students with their books sitting indoors in a commons area.">
+          <img class="img-mobile" src="./resources/images/information-campus-mobile.jpg" alt="Students with their books sitting indoors in a commons area.">
           <div class="practice-r-text">
             <h2>Our campus</h2>
             <p class="prac-notes-r">Find which campus is close by you</p>
@@ -90,8 +91,8 @@
         </div>
 
         <div class="practice-r-guest">
-          <img class="img-desk" src="./resources/images/information-guest-lecture.jpg">
-          <img class="img-mobile" src="./resources/images/information-guest-lecture-mobile.jpg">
+          <img class="img-desk" src="./resources/images/information-guest-lecture.jpg" alt="A photo of Oliver Sack.">
+          <img class="img-mobile" src="./resources/images/information-guest-lecture-mobile.jpg" alt="A photo of Oliver Sack.">
           <div class="practice-r-text">
             <h2 class="guest-text-desk">Our guest lecture</h2>
             <h2 class="guest-text-mobile">Special guest lecture</h2>
@@ -100,55 +101,53 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 
     <!-- start learning section -->
-  <!-- <div class="learn-container"> -->
     <div class="learn-title">
       <h1>Start Learning</h1>
     </div>
 
     <div class="learn-row-1">
       <div class="learn-1-1">
-        <img src="./resources/images/course-software.jpg">
-        <h2>Software engineering</h2>
+        <a href="#"><img src="./resources/images/course-software.jpg" alt="Two computer screens at a computer desk in a darkened room with a desk lamp on."></a>
+        <a href="#"><h2 role="Area of study">Software engineering</h2></a>
         <p class="courses">COURSES</p>
-        <p class="classes">Web Development, Mobile Development, iOT, APIs</p>
+        <p class="classes" role="classes">Web Development, Mobile Development, iOT, APIs</p>
       </div>
       <div class="learn-1-2">
-        <img src="./resources/images/course-computer-art.jpg">
-        <h2>Computer art</h2>
+        <a href="#"><img src="./resources/images/course-computer-art.jpg" alt="A person's hand holding a smart phone while sitting at a coffee table."></a>
+        <a href="#"><h2 role="Area of study">Computer art</h2></a>
         <p class="courses">COURSES</p>
-        <p class="classes">Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
+        <p class="classes" role="classes">Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
       </div>
       <div class="learn-1-3">
-        <img src="./resources/images/course-design.jpg">
-        <h2>Design</h2>
+        <a href="#"><img src="./resources/images/course-design.jpg" alt="A person who is outdoors holding a classic old style film camera and taking a picture."></a>
+        <a href="#"><h2 role="Area of study">Design</h2></a>
         <p class="courses">COURSES</p>
-        <p class="classes">User Experience Design, User Research, Visual Design</p>
+        <p class="classes" role="classes">User Experience Design, User Research, Visual Design</p>
       </div>
     </div>
 
     <div class="learn-row-2">
       <div class="learn-2-1">
-        <img src="./resources/images/course-data.jpg">
-        <h2>Data</h2>
+        <a href="#"><img src="./resources/images/course-data.jpg" alt="A laptop sitting on a very shiny tabletop."></a>
+        <a href="#"><h2 role="Area of study">Data</h2></a>
         <p class="courses">COURSES</p>
-        <p class="classes">Web Development, Mobile Development, iOT, APIs</p>
+        <p class="classes" role="classes">Web Development, Mobile Development, iOT, APIs</p>
       </div>
       <div class="learn-2-2">
-        <img src="./resources/images/course-business.jpg">
-        <h2>Business</h2>
+        <a href="#"><img src="./resources/images/course-business.jpg" alt="Chess pieces on a chess board."></a>
+        <a href="#"><h2 role="Area of study">Business</h2></a>
         <p class="courses">COURSES</p>
-        <p class="classes">Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
+        <p class="classes" role="classes">Imaging & Design, Web Design, Motion Graphics & Visual Effects, Computer Animation</p>
       </div>
       <div class="learn-2-3">
-        <img src="./resources/images/course-marketing.jpg">
-        <h2>Marketing</h2>
+        <a href="#"><img src="./resources/images/course-marketing.jpg" alt="A person using the smart watch on their wrist."></a>
+        <a href="#"><h2 role="Area of study">Marketing</h2></a>
         <p class="courses">COURSES</p>
-        <p class="classes">User Experience Design, User Research, Visual Design</p>
+        <p class="classes" role="classes">User Experience Design, User Research, Visual Design</p>
       </div>
     </div>
   <!-- </div> -->
@@ -168,7 +167,7 @@
           <div class="thesis-col-right">
 
             <div class="col-r-row-one">
-              <img src="./resources/images/thesis-fisma.jpg">
+              <img src="./resources/images/thesis-fisma.jpg" alt="person sitting at a desk with papers and smarphone and using a highlighter.">
               <div class="col-r-row-1-text">
                 <h2>Fisma: Design and</h2>
                 <p>Designer showcase of new prototype product</p>
@@ -176,7 +175,7 @@
             </div>
 
             <div class="col-r-row-two">
-              <img src="./resources/images/thesis-now-and-then.jpg">
+              <img src="./resources/images/thesis-now-and-then.jpg" alt="A picture of the Empire State Building taken from a distance.">
               <div class="col-r-row-2-text">
                 <h2>Now and then</h2>
                 <p>Research study about New York</p>
@@ -206,6 +205,6 @@
 
   </div><!--    END .outer-border -->
 
-  <br>
+  <br>    <!-- so bottom border is viewable -->
   </body>
 </html>
