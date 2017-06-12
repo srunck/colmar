@@ -147,7 +147,7 @@ nav span {
   margin-right: .25rem;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
 
   .header-desktop {
     display: none;
@@ -222,7 +222,7 @@ nav span {
   color: white;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   /*banner section*/
 
   .banner-section {
@@ -398,7 +398,7 @@ nav span {
   background-color: rgb(216,216,216);
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
 /*practice section*/
 
   .practice-section {
@@ -536,12 +536,12 @@ nav span {
   margin-left: 1rem;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   /*learning section*/
   .learn-row-1 img,
   .learn-row-1 p,
   .learn-row-2 img,
-  .learn-row-2 p{
+  .learn-row-2 p {
     display: none;
   }
 
@@ -670,7 +670,7 @@ nav span {
   margin-bottom: 1.2rem;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   /*Thesis section*/
   .thesis-container {
     max-width: 767px;
@@ -718,7 +718,7 @@ footer .copyright {
   flex-grow: 1;
 }
 
-@media only screen and (max-width: 767px) {
+@media (max-width: 767px) {
   /*Footer section*/
   .foot-links {
     display: none;
